@@ -18,14 +18,19 @@ public class Principal {
 
 	private static void bubbleSort(int[] valores) {
 		for (int j = 0; j < valores.length; j++) {
+			boolean trocou = false;
 			for (int i = 0; i < valores.length - 1 - j; i++) {
 				if (valores[i] > valores[i+1]) {
 					//trocar valor, inserindo o maior valor do vetor na última posição
+					trocou = true;  
 					int temp = valores[i];    //criando a variavel temp para guardar o valor de i
 					valores[i] = valores[i+1];
 					valores[i+1] = temp;
 				}
 				
+			}
+			if(!trocou) {
+				return;
 			}
 			
 		}
